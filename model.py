@@ -3,7 +3,6 @@ import numpy as np
 import tensorflow.contrib.slim as slim
 from tensorflow.contrib.slim import fully_connected as fc
 from tensorflow.examples.tutorials.mnist import input_data
-import time
 import os
 
 FLAGS = tf.app.flags.FLAGS
@@ -86,3 +85,6 @@ class Agent(object):
       if step % 50 == 0 and step != 0:
         self.saver.save(self.sess, self.log_dir)
         print 'step {0} | loss {1}'.format(step, loss)
+
+  def test(self):
+    raise NotImplementedError()

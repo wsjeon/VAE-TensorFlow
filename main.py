@@ -1,8 +1,6 @@
-import time
 import numpy as np
 import tensorflow as tf
 from model import Agent
-from tensorflow.examples.tutorials.mnist import input_data
 
 import os; os.environ['CUDA_VISIBLE_DEVICES']='0'
 
